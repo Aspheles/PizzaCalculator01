@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">  
+      </head> 
+
+    <body>     
+
+        
+
+            
+        <h1 id="myHeader">Pizza Calculator</h1>
+
+        <div id="totalsmall"></div>
+        <div id="totalmedium"></div> 
+        <div id="totallarge"></div>
+        
+
+
+        
+
+    </body>
+
+    <script>
+                
+                                // Yavuz Dereli Pizza Calculator
+        const SMALLPRICE = 6;
+        const MEDIUMPRICE = 9; // Prijzen van de pizzas
+        const LARGEPRICE = 12;
+
+        var small = prompt('Aantal small pizzas')
+        var medium = prompt('Aantal medium pizzas') // Het invoer van de hoeveelheid pizzas
+        var large = prompt('Aantal large pizzas')
+        var breakline = '<br />' // Enter
+        var space = ' ' // spatie
+        var totalsmall = small * SMALLPRICE;
+        var totalmedium = medium * MEDIUMPRICE; // het totale prijs met de hoeveelheid keer de prijs
+        var totallarge = large * LARGEPRICE;
+
+        
+
+
+        document.getElementById("totalsmall").innerHTML = 'Aantal small pizzas besteld : ' + space + small
+        document.getElementById("totalmedium").innerHTML = 'Aantal medium pizzas besteld : ' + space + medium
+        document.getElementById("totallarge").innerHTML = 'Aantal large pizzas besteld : ' + space + large
+        document.write(breakline)
+
+
+
+        document.write('Small pizzas : '  + space + '€' + space + SMALLPRICE + space + 'x'+ space + small + space + '=' + space + totalsmall + space + 'Euro')
+        document.write(breakline);
+        document.write('Medium pizzas : '  + space + '€' + space + MEDIUMPRICE + space + 'x'+ space + medium + space + '=' + space + totalmedium + space + 'Euro')
+        document.write(breakline)
+        document.write('Large pizzas : '  + space + '€' + space + LARGEPRICE + space + 'x'+ space + large + space + '=' + space + totallarge + space + 'Euro')
+        document.write(breakline);
+        document.write(breakline)  // Toont het hoeveelheid met de prijs en de totale prijs erbij
+        document.write('Totaal bedrag');
+        document.write(breakline)
+        document.write('€')
+        document.write(totalsmall + totalmedium + totallarge)
+
+
+    </script>
+
+</html>
